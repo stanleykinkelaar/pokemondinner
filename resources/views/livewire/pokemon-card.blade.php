@@ -46,7 +46,7 @@
 
         @if($count >= 69)
             <div class="mt-8 text-center">
-                <span class="text-2xl tracking-widest">Doet niks, maar is wel leuk toch?</span>
+                <span class="text-4xl tracking-widest underline">Doet niks, maar is wel leuk toch?</span>
             </div>
         @endif
     @endforelse
