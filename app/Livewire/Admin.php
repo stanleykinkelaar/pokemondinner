@@ -102,14 +102,14 @@ class Admin extends Component
         $this->showIndex = true;
     }
 
-    public function activate($id): void
+    public function activate(Card $card): void
     {
-        $card = Card::find($id);
         if ($card->active) {
             $card->active = false;
         } else {
             $card->active = true;
         }
+
         $card->save();
 
         $this->success('Done');

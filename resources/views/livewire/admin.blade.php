@@ -20,7 +20,7 @@
         @if($showIndex)
             <div class="flex flex-col gap-8">
                 @foreach($cards as $card)
-                    <div wire:poll.5s wire:key="$card->id" class="flex flex-col bg-slate-200 w-full h-full rounded p-4">
+                    <div wire:poll.5s wire:key="{{ $card->id }}" class="flex flex-col bg-slate-200 w-full h-full rounded p-4 gap-4">
                         @if($card->active)
                             <div class="w-full bg-green-400 text-center text-2xl text-black rounded">
                                 ACTIVE!
@@ -62,7 +62,7 @@
                             <x-mary-button class="w-full" wire:navigate :link="route('edit', $card)">
                                 edit
                             </x-mary-button>
-                            <x-mary-button class="w-full" wire:click="activate({{ $card->id }})">
+                            <x-mary-button class="w-full" wire:click="activate({{ $card }})">
                                 @if($card->active)
                                     deactivate
                                 @else
