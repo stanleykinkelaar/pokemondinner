@@ -5,3 +5,7 @@
 ul {
   @apply list-disc;
 }
+
+body {
+    @apply bg-slate-700;
+}

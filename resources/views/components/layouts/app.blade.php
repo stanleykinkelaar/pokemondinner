@@ -11,7 +11,7 @@
 
     <title>{{ $title ?? 'Page Title' }}</title>
 </head>
-<body class="bg-slate-700 flex items-center justify-center @if(request()->is('/')) h-screen @endif">
+<body class="flex items-center justify-center min-h-screen">
 <x-mary-toast />
 {{ $slot }}
 </body>

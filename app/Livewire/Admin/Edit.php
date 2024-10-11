@@ -3,6 +3,7 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Card;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Mary\Traits\Toast;
@@ -36,6 +37,7 @@ class Edit extends Component
         $this->cardId = $card->id;
     }
 
+    #[Title('Edit Card')]
     public function render(Card $card)
     {
         return view('livewire.admin.edit')

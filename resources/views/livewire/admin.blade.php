@@ -1,4 +1,4 @@
-<div class="w-2/3 py-16 h-screen">
+<div class="w-2/3 py-16">
     <div class="flex gap-8">
         <x-mary-button wire:click="selectCreate">Create</x-mary-button>
         <x-mary-button wire:click="selectIndex">show</x-mary-button>
