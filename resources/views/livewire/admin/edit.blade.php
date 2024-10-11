@@ -1,4 +1,4 @@
-<div class="py-8">
+<div class="py-16 px-8">
     <x-mary-form class="">
         <x-mary-input label="Naam" wire:model="name" placeholder="Naam"/>
         <x-mary-file label="Afbeelding" wire:model="image"/>
