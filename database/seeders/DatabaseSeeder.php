@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Card;
 use App\Models\User;
+
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,9 +17,19 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        $colors = [
+            'Slate', 'Gray', 'Zinc', 'Neutral',
+            'Stone', 'Orange', 'Amber', 'Yellow',
+            'Lime', 'Green', 'Emerald', 'Teal',
+            'Cyan', 'Sky', 'Blue',
+            'Indigo', 'Violet', 'Purple',
+            'Fuchsia', 'Pink', 'Rose',
+        ];
+
+        foreach ($colors as $color) {
+            Card::factory()->create([
+                'color' => $color,
+            ]);
+        }
     }
 }
