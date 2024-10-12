@@ -80,7 +80,8 @@ class Edit extends Component
         ]);
 
         if ($this->image !== $card->dish->image) {
-            $image = $this->image->store('images', 'public/storage');
+            $name = md5($this->image . microtime()).'.'.$this->image->extension();
+            $image = $this->image->storeAs('photos', $name, 'public');
         }
 
         $card->dish->update([

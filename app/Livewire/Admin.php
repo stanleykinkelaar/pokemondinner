@@ -71,7 +71,8 @@ class Admin extends Component
             'ingredients' => 'required',
         ]);
 
-        $image = $this->image->store('images', 'public/storage');
+        $name = md5($this->image . microtime()).'.'.$this->image->extension();
+        $image = $this->image->storeAs('photos', $name, 'public');
 
         $dish = Dish::create([
             'name' => $this->name,
