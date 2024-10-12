@@ -29,7 +29,7 @@
                         <div class="flex flex-col gap-2 my-4">
                             <div class="h-60">
                                 <img
-                                    src="{{ asset('storage/' . $card->dish->image) }}"
+                                    src="{{ asset($card->dish->image) }}"
                                     alt="Dish Image" class="w-full h-full object-cover rounded-lg shadow-xl">
                             </div>
                             <div class="">
