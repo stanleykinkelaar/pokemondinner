@@ -5,7 +5,7 @@
             <!-- Dish Image -->
             <div class="w-full h-40 bg-{{ $card->color }}-200 rounded-lg mb-4">
                 <img
-                    src="{{ asset($card->dish->image) }}"
+                    src="{{ asset('storage/' . $card->dish->image) }}"
                     alt="Dish Image" class="w-full h-full object-cover rounded-lg shadow-xl">
             </div>
             <!-- Dish Name -->
