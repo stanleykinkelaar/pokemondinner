@@ -80,7 +80,7 @@ class Edit extends Component
         ]);
 
         if ($this->image !== $card->dish->image) {
-            $image = $this->image->store('images', 'public');
+            $image = $this->image->store('images', 'public/storage');
         }
 
         $card->dish->update([

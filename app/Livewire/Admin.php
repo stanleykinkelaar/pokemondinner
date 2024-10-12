@@ -71,7 +71,7 @@ class Admin extends Component
             'ingredients' => 'required',
         ]);
 
-        $image = $this->image->store('images', 'public');
+        $image = $this->image->store('images', 'public/storage');
 
         $dish = Dish::create([
             'name' => $this->name,
